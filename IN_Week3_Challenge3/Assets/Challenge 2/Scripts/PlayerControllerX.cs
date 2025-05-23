@@ -21,15 +21,17 @@ public class PlayerControllerX : MonoBehaviour
             }
         }
     }
+        //coroutine added, adds cool down for dog spawning
         IEnumerator CoolDown( )
     {
         isCoolDown = true;
         yield return new WaitForSeconds(coolDown);
         isCoolDown = false;
     }
+        // dog spawning 
     private void SpawnDog()
     {
-            Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
+        Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
     }
                
 }
